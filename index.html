@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 2</title>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/consultas/consultar_computer.js"></script>
+    <script type="text/javascript" src="js/consultas/consultar_client.js"></script>
+    <script type="text/javascript" src="js/consultas/consultar_mensajes.js"></script>
+    <script type="text/javascript" src="js/guardar/guardar_computer.js"></script>
+    <script type="text/javascript" src="js/guardar/guardar_client.js"></script>
+    <script type="text/javascript" src="js/guardar/guardar_mensajes.js"></script>
+    <script type="text/javascript" src="js/eliminar/eliminar_computer.js"></script>
+    <script type="text/javascript" src="js/eliminar/eliminar_client.js"></script>
+    <script type="text/javascript" src="js/eliminar/eliminar_mensajes.js"></script>
+</head>
+
+<body>
+    <fieldset>
+        <h1 align="center">SISTEMA DE ALQUILER DE NUBE DE COMPUTO</h1>
+    </fieldset>
+    <br><br>
+
+    <fieldset>
+        <label for="ID">ID:</label>
+        <input type="number" id="IDC" name="IDC">
+        <label for="MARCA">MARCA: </label>
+        <input type="text" id="MARCA" name="MARCA">
+        <label for="MODELO">MODELO: </label>
+        <input type="number" id="MODELO" name="MODELO">
+        <label for="CATEGORY_ID">CATEGORY_ID:</label>
+        <input type="number" id="CATEGORY_ID" name="CATEGORY_ID">
+        <label for="NOMBRE">NOMBRE: </label>
+        <input type="text" id="NOMBREC" name="NOMBREC">
+        <br><br>
+        <button onclick="guardar_cloud()">Registrar nube</button><br>
+    </fieldset>
+    <fieldset
+    ><button id="consultarCM" onclick="consultar_cloud()">CONSULTAR TABLA DE NUBE</button><br>
+        <div id="tablaCM"></div>
+    </fieldset>
+    <br><br>
+
+    <fieldset>
+        <label for="ID">ID:</label>
+        <input type="number" id="IDN" name="IDN">
+        <label for="NAME">NOMBRE: </label>
+        <input type="text" id="NAME" name="NAME">
+        <label for="EMAIL">EMAIL: </label>
+        <input type="email" id="EMAIL" name="EMAIL">
+        <label for="AGE">EDAD:</label>
+        <input type="number" id="AGE" name="AGE">
+        <br><br>
+        <button onclick="guardar_client()">Registrar cliente:</button><br>
+    </fieldset>
+    <fieldset><button id="consultarCL" onclick="consultar_client()">CONSULTAR TABLA CLIENTES</button><br>
+        <div id="tablaCL"></div>
+    </fieldset>
+    <br><br>
+
+    <fieldset>
+        <button onclick="guardar_mensajes()">Registrar mensaje:</button><br>
+        <label for="ID">ID:</label>
+        <input type="number" id="IDM" name="IDM">
+        <textarea name="mensaje" id="mensaje" cols="40" rows="5" style="resize: both;">
+        </textarea>
+    </fieldset>
+    <fieldset><button id="consultarM" onclick="consultar_mensajes()">CONSULTAR TABLA MENSAJES</button><br>
+        <div id="tablaM"></div>
+    </fieldset>
+    <br><br>
+   
+</body>
+
+</html>
